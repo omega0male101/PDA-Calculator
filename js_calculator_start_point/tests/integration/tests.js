@@ -16,4 +16,22 @@ describe('calculator functionality', function() {
     expect(running_total.getAttribute('value')).to.eventually.equal('2')
   })
 
-});
+  it('should update display for multiple number clicks', function(){
+       running_total = element(by.css('#running_total'))
+       element(by.css('#number1')).click();
+       element(by.css('#number9')).click();
+       expect(running_total.getAttribute('value')).to.eventually.equal('19')
+  })
+
+  it('should update display for adding', function(){
+     running_total = element(by.css('#running_total'))
+     element(by.css('#number8')).click();
+     element(by.css('#operator_add')).click();
+     element(by.css('#number9')).click();
+     element(by.css('#operator_equals')).click();
+     expect(running_total.getAttribute('value')).to.eventually.equal('17')
+   })
+
+
+
+  });
