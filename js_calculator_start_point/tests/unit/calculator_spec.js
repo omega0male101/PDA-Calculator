@@ -11,4 +11,9 @@ describe('calculator', function () {
     assert.equal(true, true)
   })
 
+  it('can add to total', function(){
+      calculator.add(3);
+      assert.equal(3, calculator.runningTotal);
+    })
+
 });
