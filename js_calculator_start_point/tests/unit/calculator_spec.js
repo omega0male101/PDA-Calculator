@@ -27,4 +27,10 @@ describe('calculator', function () {
       assert.equal(100, calculator.runningTotal);
   })
 
+  it('can divide total', function(){
+      calculator.previousTotal = 100;
+      calculator.divide(10);
+      assert.equal(10, calculator.runningTotal);
+  })
+
 });
