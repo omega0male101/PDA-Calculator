@@ -108,7 +108,7 @@ describe('calculator functionality', function() {
       expect(running_total.getAttribute('value')).to.eventually.equal('0')
     })
 
-  it('should handle infinitly large numbers', function(){
+  it('should handle infinitly large numbers, display 0', function(){
        running_total = element(by.css('#running_total'))
        element(by.css('#number9')).click();
        element(by.css('#operator_divide')).click();
