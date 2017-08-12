@@ -33,4 +33,9 @@ describe('calculator', function () {
       assert.equal(10, calculator.runningTotal);
   })
 
+  it('number click changes new Total', function(){
+      calculator.numberClick(2);
+      assert.equal(false, calculator.newTotal);
+    })
+
 });
