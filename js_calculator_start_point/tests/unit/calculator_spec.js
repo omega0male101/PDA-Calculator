@@ -38,12 +38,38 @@ describe('calculator', function () {
       assert.equal(false, calculator.newTotal);
   })
 
-  it('can use operatorClick to multiply', function(){
+  it('operatorClick to multiply', function(){
       calculator.numberClick(8);
       calculator.operatorClick('*');
       calculator.numberClick(10);
       calculator.operatorClick('=');
       assert.equal(80, calculator.runningTotal);
     })
+
+  it('operatorClick to add', function(){
+      calculator.numberClick(20);
+      calculator.operatorClick('+');
+      calculator.numberClick(40);
+      calculator.operatorClick('=');
+      assert.equal(60, calculator.runningTotal);
+    })
+
+  it('operatorClick to subtract', function(){
+    calculator.numberClick(10);
+    calculator.operatorClick('-');
+    calculator.numberClick(5);
+    calculator.operatorClick('=');
+    assert.equal(5, calculator.runningTotal);
+  })
+
+  it('operatorClick can divide', function(){
+      calculator.numberClick(10);
+      calculator.operatorClick('/');
+      calculator.numberClick(2);
+      calculator.operatorClick('=');
+      assert.equal(5, calculator.runningTotal);
+  })
+
+   
 
 });
