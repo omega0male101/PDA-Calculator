@@ -70,6 +70,16 @@ describe('calculator', function () {
       assert.equal(5, calculator.runningTotal);
   })
 
+  it('clearclick can wipe after running total', function(){
+      calculator.numberClick(10);
+      calculator.operatorClick('-');
+      calculator.numberClick(5);
+      calculator.operatorClick('=');
+      assert.equal(5, calculator.runningTotal);
+      calculator.clearClick();
+      assert.equal(0, calculator.runningTotal);
+    })
+
    
 
 });
