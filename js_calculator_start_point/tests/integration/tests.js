@@ -52,11 +52,11 @@ describe('calculator functionality', function() {
 
   it('should update display for division', function(){
        running_total = element(by.css('#running_total'))
-       element(by.css('#number6')).click();
+       element(by.css('#number5')).click();
        element(by.css('#operator_divide')).click();
-       element(by.css('#number3')).click();
+       element(by.css('#number2')).click();
        element(by.css('#operator_equals')).click();
-       expect(running_total.getAttribute('value')).to.eventually.equal('4.5')
+       expect(running_total.getAttribute('value')).to.eventually.equal('2.5')
      })
 
 
