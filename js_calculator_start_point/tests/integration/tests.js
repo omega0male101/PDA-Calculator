@@ -41,5 +41,14 @@ describe('calculator functionality', function() {
        expect(running_total.getAttribute('value')).to.eventually.equal('8')
     })
 
+  it('should update display for multiplication', function(){
+       running_total = element(by.css('#running_total'))
+       element(by.css('#number5')).click();
+       element(by.css('#operator_multiply')).click();
+       element(by.css('#number3')).click();
+       element(by.css('#operator_equals')).click();
+       expect(running_total.getAttribute('value')).to.eventually.equal('15')
+    })
+
 
   });
