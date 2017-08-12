@@ -21,4 +21,10 @@ describe('calculator', function () {
       assert.equal(-10, calculator.runningTotal);
   })
 
+  it('can multiply to total', function(){
+      calculator.previousTotal = 10;
+      calculator.multiply(10);
+      assert.equal(100, calculator.runningTotal);
+  })
+
 });
