@@ -14,6 +14,11 @@ describe('calculator', function () {
   it('can add to total', function(){
       calculator.add(3);
       assert.equal(3, calculator.runningTotal);
-    })
+  })
+
+  it('can subtract to total', function(){
+      calculator.subtract(10);
+      assert.equal(-10, calculator.runningTotal);
+  })
 
 });
