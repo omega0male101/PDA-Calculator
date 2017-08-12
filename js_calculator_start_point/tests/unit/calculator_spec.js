@@ -34,8 +34,16 @@ describe('calculator', function () {
   })
 
   it('number click changes new Total', function(){
-      calculator.numberClick(2);
+      calculator.numberClick(4);
       assert.equal(false, calculator.newTotal);
+  })
+
+  it('can use operatorClick to multiply', function(){
+      calculator.numberClick(8);
+      calculator.operatorClick('*');
+      calculator.numberClick(10);
+      calculator.operatorClick('=');
+      assert.equal(80, calculator.runningTotal);
     })
 
 });
